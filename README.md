@@ -15,12 +15,12 @@ The uitviic_captions_train2017 dataset consists of images and their correspondin
 The model architecture consists of two main parts: the Resnet18 for image embedding and the Transformer Decoder for word embedding. The Resnet18 takes an image as input and outputs a fixed-length feature vector, which is then fed into the Transformer Decoder to generate the corresponding caption.
 
 ## Usage
-To train the model, first download and extract the uitviic_captions_train2017 dataset. Then run the train.py script, which will train the model and save the checkpoints.
+To train the model, first download and extract the uitviic_captions_train2017 dataset. Then run `notebook.ipynb` (written for Google Colab), which trains the model and saves the checkpoints.
 
-To evaluate the model, run the evaluate.py script, which will load the trained model and generate captions for a given image.
+The evaluation cells at the end of `notebook.ipynb` generate captions for the test images and compute the scores below.
 
 ## Results
-The model achieved BLEU-4=0.7 on the uitviic_captions_train2017 dataset, which demonstrates the effectiveness of the Resnet18 and Transformer Decoder architecture for image captioning.
+On the 231-image test split the model scored BLEU-1 0.71, BLEU-2 0.58, BLEU-3 0.47, BLEU-4 0.40, ROUGE-L 0.59 and CIDEr 1.13 (printed by the evaluation cell in `notebook.ipynb`; pycocoevalcap).
 
 
 
